@@ -5,6 +5,8 @@ import os, webbrowser, urllib.request
 
 root = Tk()
 
+creator = "jvietman"
+
 # Configuration
 root.title("Change Counter")
 root.geometry("600x500")
@@ -35,10 +37,10 @@ def about():
 
     info = Label(sub, text="Change Counter", font=("", 15))
     info.place(anchor=CENTER, relx=0.5, rely=0.6)
-    author = Label(sub, text="Made by jvietman", font=("", 10))
+    author = Label(sub, text="Made by "+creator, font=("", 10))
     author.place(anchor=CENTER, relx=0.5, rely=0.65)
 
-    linkbtn = Button(sub, image=github, command=lambda: webbrowser.open("https://github.com/jvietman"))
+    linkbtn = Button(sub, image=github, command=lambda: webbrowser.open("https://github.com/"+creator))
     linkbtn.image = github
     linkbtn.place(anchor=CENTER, relx=0.5, rely=0.9, relwidth=0.8, relheight=0.1)
 
